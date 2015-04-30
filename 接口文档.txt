@@ -1,0 +1,46 @@
+1.登录接口 /weixin/login
+  参数：loginName=
+        passWord=
+
+2.查询天气接口：http://m.weather.com.cn/atad/101040100.html
+  返回格式：
+           {"weatherinfo":
+			     {"city":"重庆","city_en":"chongqing","date_y":"2014年12月8日","date":"十月十七",
+				  "week":"星一","fchh":"11","cityid":"101040100",
+				  "temp1":"15℃~9℃","temp2":"11℃~7℃","temp3":"8℃~5℃","temp4":"8℃~5℃","temp5":"9℃~5℃","temp6":"10℃~6℃",
+                  "tempF1":"59℉~48.2℉","tempF2":"51.8℉~44.6℉","tempF3":"46.4℉~41℉","tempF4":"46.4℉~41℉","tempF5":"48.2℉~41℉","tempF6":"50℉~42.8℉",
+				  "weather1":"多云转阴","weather2":"小雨","weather3":"小雨","weather4":"小雨转阴","weather5":"多云","weather6":"多云",
+				  "img1":"1","img2":"2","img3":"7","img4":"99","img5":"7","img6":"99","img7":"7","img8":"2","img9":"1","img10":"99","img11":"1","img12":"99",
+				  "img_single":"1","img_title1":"多云","img_title2":"阴","img_title3":"小雨","img_title4":"小雨","img_title5":"小雨","img_title6":"小雨",
+				  "img_title7":"小雨","img_title8":"阴","img_title9":"多云","img_title10":"多云","img_title11":"多云","img_title12":"多云","img_title_single":"多云",
+				  "wind1":"微风","wind2":"微风","wind3":"微风","wind4":"微风","wind5":"微风","wind6":"微风","fx1":"微风","fx2":"微风",
+				  "fl1":"小于3级","fl2":"小于3级","fl3":"小于3级","fl4":"小于3级","fl5":"小于3级","fl6":"小于3级","index":"较冷",
+				  "index_d":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。",
+				  "index48":"","index48_d":"","index_uv":"最弱","index48_uv":"","index_xc":"较适宜","index_tr":"适宜","index_co":"舒适","st1":"15","st2":"8","st3":"10","st4":"7","st5":"8","st6":"5","index_cl":"适宜","index_ls":"基本适宜","index_ag":"极不易发"
+		}
+
+	}
+
+3.查询成绩接口：/weixin/service?type=score
+    返回格式：[
+				{"kcmc":"数字电路与逻辑设计","cj":"64","xzmc":"正常考试"},
+				{"kcmc":"电工电子2","cj":"83","xzmc":"正常考试"},
+				{"kcmc":"大学物理(下)","cj":"72","xzmc":"正常考试"},
+				{"kcmc":"物理实验(下)","cj":"80","xzmc":"正常考试"},
+				{"kcmc":"数据结构","cj":"90","xzmc":"正常考试"},
+				{"kcmc":"离散数学","cj":"81","xzmc":"正常考试"},
+				{"kcmc":"大学英语3(视听说)","cj":"77","xzmc":"正常考试"},
+				{"kcmc":"大学英语3(读写译)","cj":"79","xzmc":"正常考试"},
+				{"kcmc":"体育（3）","cj":"83","xzmc":"正常考试"}
+				
+			]
+			
+4.图书馆借阅查询:/weixin/service?type=libraryRec
+   返回格式:[
+              {"tsmc":"MySQL性能调优与架构设计","jsrq":"2014-10-13","yhrq":"2014-12-12"},
+			  {"tsmc":"MySQL必知必会","jsrq":"2014-10-13","yhrq":"2014-12-12"}
+			]
+
+
+           
+        

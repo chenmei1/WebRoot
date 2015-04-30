@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>重邮微信平台</title>
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+<link rel='stylesheet' type='text/css' href="css/style.css" />
+<script type="text/javascript" src='js/jquery-1.7.2.min.js' ></script>
+<script type="text/javascript" src='js/handlebars.js' ></script>
+</head>
+<body>
+<h1>图书借阅记录查询</h1>
+<div class="nav pink">
+	<h2>借阅日期</h2>
+	<h2>书籍名称</h2>
+	<h2>应还日期</h2>
+</div>
+<div id="loding">
+	<img src="img/loding.gif"/>
+</div>
+<table id="record">
+	<script id="record-template" type="text/x-handlebars-template">
+		{{#each this}}
+			<tr>
+				<td>{{time}}</td>
+				<td>{{name}}</td>
+				<td>{{end_time}}</td>
+			</tr>
+		{{/each}}
+	</script>
+</table>
+<script type="text/javascript" src='js/ajax.js' ></script>
+<script type="text/javascript" >
+	record();
+</script>
+</body>
+</html>

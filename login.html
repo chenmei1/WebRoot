@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>重邮微信平台</title>
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+<link rel='stylesheet' type='text/css' href="css/style.css" />
+<script type="text/javascript" src='js/jquery-1.6.4.js' ></script>
+<script type="text/javascript" src='js/jquery-json.js' ></script>
+<script type="text/javascript" src='js/handlebars.js' ></script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="error">
+		<p id="tip">输入信息有误</p>
+		<p id="again">重新输入</p>
+	</div>
+</div>
+<header id="login_header">
+	<p><img src="img/logo.png" class="login_logo"/></p>
+	<p><img src="img/name.png" class="name"/></p>
+	<p><img src="img/name2.png" class="name2"/></p>
+</header>
+<div class="login_form">
+	<form>
+		<p><input type="text" id="number" value="请输入统一认证码" required placeholer="输入统一认证码"/></p>
+		<p><input type="password" id="psw"/><span class="psw" required>请输入密码</span></p>
+		<p><button id="submit">登录</button></p>
+	</form>
+</div>
+<script type="text/javascript" src='js/ajax.js'></script>
+<script>
+	function form(id,str){
+		var id=$(id);
+		id.focus(function(){
+			id.val("");
+		})
+		id.blur(function(){
+			if(id.val()==""){
+				id.val(str);
+			}
+		})
+	}
+	function psw(){
+		var psw=$("#psw");
+		var span=$(".psw");
+		psw.focus(function(){
+			span.css("display","none");
+		})
+		psw.blur(function(){
+			if(psw.val()==""){
+				span.css("display","block");
+			}
+		})
+	}
+	form("#number","请输入统一认证码");
+	psw();
+	login();
+</script>
+</body>
+</html>
