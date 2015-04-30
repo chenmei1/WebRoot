@@ -44,7 +44,6 @@ function recharge(id){
 	var url="/weixin/service?type=spendRec&page="+id+"";
 	$.ajax({
 		"url":url,
-		"type":"post",
 		"data":"",
 		"success":function(result){
 			$("#loding").css("display","none");
